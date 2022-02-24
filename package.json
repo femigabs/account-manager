@@ -1,0 +1,43 @@
+{
+  "name": "account-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r esm .",
+    "migrate:create": "knex migrate:make",
+    "migrate:down": "knex migrate:rollback",
+    "migrate:up": "knex migrate:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femigabs/account-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/femigabs/account-manager/issues"
+  },
+  "homepage": "https://github.com/femigabs/account-manager#readme",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.3",
+    "file-stream-rotator": "^0.6.1",
+    "helmet": "^5.0.2",
+    "knex": "^1.0.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "winston": "^2.3.0"
+  }
+}
