@@ -37,7 +37,7 @@
         "no-trailing-spaces": "error",
         "no-multi-spaces": "error",
         "eqeqeq": ["error", "always"],
-        "camelcase": 2,
+        "camelcase": 1,
         "prefer-const": ["error", {
         "destructuring": "any",
         "ignoreReadBeforeAssign": false

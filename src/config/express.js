@@ -59,7 +59,7 @@ const expressConfig = (app) => {
     next();
   });
 
-  app.use('/api/v1', routes);
+  app.use('/v1', routes);
 
   // catch 404 and forward to error handler
   app.use((req, res, next) => next(Error('Route Not Found', 404)));

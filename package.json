@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm run migrate-test:down && npm run migrate-test:up",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --reporter=text-summary mocha -c -r esm \"./tests/**/*.js\" --timeout 12000 --exit",
+    "posttest": "npm run migrate-test:down",
     "dev": "nodemon -r esm .",
     "migrate:create": "knex migrate:make",
     "migrate:down": "knex migrate:rollback",
-    "migrate:up": "knex migrate:latest"
+    "migrate:up": "knex migrate:latest",
+    "migrate-test:up": "knex migrate:latest --env test",
+    "migrate-test:down": "knex migrate:rollback --env test"
   },
   "repository": {
     "type": "git",
@@ -20,7 +25,10 @@
   },
   "homepage": "https://github.com/femigabs/account-manager#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "app-root-path": "^3.0.0",
+    "bcrypt": "^5.0.1",
+    "chai": "^4.3.6",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
@@ -33,11 +41,15 @@
     "express": "^4.17.3",
     "file-stream-rotator": "^0.6.1",
     "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^1.0.3",
+    "mocha": "^9.2.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
+    "nyc": "^15.1.0",
+    "supertest": "^6.2.2",
     "winston": "^2.3.0"
   }
 }
