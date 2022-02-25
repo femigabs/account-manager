@@ -8,6 +8,8 @@ exports.up = function (knex) {
     table.integer('account').notNullable();
     table.string('first_name').notNullable();
     table.string('last_name').notNullable();
+    table.string('email').notNullable();
+    table.string('password').notNullable();
     table.decimal('balance', 14,2).defaultTo(0);
     table.string('status').defaultTo('active');
     table.timestamp('created_at').defaultTo(knex.fn.now());

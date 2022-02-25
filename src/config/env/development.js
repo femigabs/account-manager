@@ -10,4 +10,6 @@ export default {
   PORT: process.env.PORT,
   API_VERSION: process.env.API_VERSION,
   NODE_ENV: process.env.NODE_ENV,
+  JWT_SECRET: process.env.JWT_SECRET,
+  JWT_EXPIRY_DURATION: process.env.JWT_EXPIRY_DURATION,
 };
