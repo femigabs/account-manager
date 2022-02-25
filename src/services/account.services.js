@@ -18,10 +18,10 @@ export const createAccount = async (body) => {
 
 export const loginAccount = async (user) => {
   const {
-    id, first_name, last_name, email,
+    id, first_name, last_name, email, account,
   } = user;
   const token = generateToken({
-    id, first_name, last_name, email,
+    id, first_name, last_name, email, account,
   });
   return {
     ...user,

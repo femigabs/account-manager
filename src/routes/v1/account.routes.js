@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable import/no-cycle */
 import express from 'express';
 import * as AccountValidator from '../../validators/account.validators';
 import * as AccountController from '../../controllers/account.controllers';
