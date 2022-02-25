@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import * as AccountServices from '../services/account.services';
 import { successResponse } from '../utils';
 import constants from '../utils/constants/messages';
@@ -18,7 +19,7 @@ export const createAccount = async (req, res, next) => {
 };
 
 /**
- * Controller to add movie comments
+ * Controller to login account
  * @param  {object} req - request object
  * @param {object} res - response object
  * @param {Function} next

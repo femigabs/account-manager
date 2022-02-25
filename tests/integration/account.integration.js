@@ -27,7 +27,7 @@ describe('Account APIs', () => {
           email: 'test@gmail.com',
           password: 'password',
         })
-        // .expect(201)
+        .expect(201)
         .end((err, res) => {
           expect(res.body.code).to.equal(201);
           expect(res.body.status).to.equal('success');
