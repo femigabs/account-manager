@@ -9,11 +9,9 @@ export const createAccount = async (body) => {
   } = body;
   const hashedPassword = hashPassword(body.password);
   const account = `102${generateRandomNumber(7)}`;
-  const [user] = await db('accounts').insert({
+  await db('accounts').insert({
     first_name, last_name, email, account, password: hashedPassword,
   });
-  const { password, ...newUser } = user;
-  return newUser;
 };
 
 export const loginAccount = async (user) => {

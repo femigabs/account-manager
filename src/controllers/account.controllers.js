@@ -11,8 +11,8 @@ import constants from '../utils/constants/messages';
  */
 export const createAccount = async (req, res, next) => {
   try {
-    const data = await AccountServices.createAccount(req.body);
-    successResponse(res, constants.CREATE_SUCCESS('Account'), 201, data);
+    await AccountServices.createAccount(req.body);
+    successResponse(res, constants.CREATE_SUCCESS('Account'), 201, {});
   } catch (error) {
     next(error);
   }
